@@ -13,7 +13,7 @@ public class Example1 {
 
     public void stampaPersonale() {
 
-        HashSet<Persona> persone = stampaMance(this.serviziCamera);
+        HashSet<Persona> persone = stampaMance();
 
         for(Persona p : persone) {
 
@@ -23,7 +23,10 @@ public class Example1 {
     }
 
 
-    public HashSet<Persona> stampaMance(List<Servizio> servizi) {
+
+    /*il metodo stampaMance cicla la lista dei servizi
+    * prende il personale per ogni servizi e lo mette in un set*/
+    public HashSet<Persona> stampaMance() {
 
         HashSet<Persona> result = new HashSet<>();
 
