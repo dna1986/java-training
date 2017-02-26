@@ -15,10 +15,15 @@ public class ServizioCamera {
 
     public void stampaPersonale() {
 
+        //Per leggibilità chiamo il metodo stampaMance che restituisce un Hashset<Persona> e lo metto in un oggetto persone
+        // che uso in seguito nel metodo
         HashSet<Persona> persone = stampaMance();
 
+
+        //Qui uso "persone" e ci faccio un for
         for(Persona p : persone) {
 
+            //Faccio la stampa della persona
             System.out.println("Stampare qua la persona" + p);
         }
 
