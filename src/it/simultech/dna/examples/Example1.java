@@ -3,22 +3,35 @@ package it.simultech.dna.examples;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 
 public class Example1 {
 
 
-    private List<String> serviziCamera = new ArrayList<>();
-    private Set<String> setPersonale = new HashSet<>();
+    private List<Servizio> serviziCamera = new ArrayList<>();
 
 
     public void stampaPersonale() {
 
-        for (String stampa : this.serviziCamera) {
+        HashSet<Persona> persone = stampaMance(this.serviziCamera);
 
-            this.setPersonale.add(stampa);
+        for(Persona p : persone) {
+
+            System.out.println("Stampare qua la persona" + p);
         }
+
+    }
+
+
+    public HashSet<Persona> stampaMance(List<Servizio> servizi) {
+
+        HashSet<Persona> result = new HashSet<>();
+
+        for (Servizio s : this.serviziCamera) {
+            result.add(s.getPersona());
+        }
+
+        return result;
 
     }
 
