@@ -5,8 +5,16 @@ package it.simultech.dna.examples;
  */
 public class Servizio {
 
-    private  Persona persona;
+    private String nome;
+    private Persona persona;
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public Persona getPersona() {
         return persona;
